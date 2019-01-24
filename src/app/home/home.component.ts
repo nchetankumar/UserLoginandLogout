@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../shared/user.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -19,9 +20,14 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  Logout() {
-    localStorage.removeItem('userToken');
-    this.router.navigate(['/login']);
+  Logout(uid) {    
+    this.userService.userLogout(uid).subscribe((data : any)=>{
+      localStorage.removeItem('userToken');
+      this.router.navigate(['/login']);
+    },
+    (err : HttpErrorResponse)=>{
+      //this.isLoginError = true;
+    });
   }
   UpdatePassword(){    
     this.router.navigate(['/updatePass']);
