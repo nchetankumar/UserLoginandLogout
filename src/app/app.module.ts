@@ -16,6 +16,7 @@ import { appRoutes } from './routes';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { ForgetPassComponent } from './user/forget-pass/forget-pass.component';
+import { UpdatePassComponent } from './user/update-pass/update-pass.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ForgetPassComponent } from './user/forget-pass/forget-pass.component';
     UserComponent,
     SignInComponent,
     HomeComponent,
-    ForgetPassComponent
+    ForgetPassComponent,
+    UpdatePassComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,6 @@ import { ForgetPassComponent } from './user/forget-pass/forget-pass.component';
     RouterModule.forRoot(appRoutes)
   ],
   providers: [UserService,AuthGuard,
-    ,
     {
       provide : HTTP_INTERCEPTORS,
       useClass : AuthInterceptor,

@@ -23,6 +23,9 @@ export class HomeComponent implements OnInit {
     localStorage.removeItem('userToken');
     this.router.navigate(['/login']);
   }
+  UpdatePassword(){    
+    this.router.navigate(['/updatePass']);
+  }
 
 
 }

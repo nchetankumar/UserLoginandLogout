@@ -1,0 +1,20 @@
+<div *ngIf="isPasswordDontMatch" class="red-text center error-message">
+    <i class="material-icons">error</i> Password and confirm password doesn't match
+</div>
+<form class="col s12 white" #updatePwdForm="ngForm" (ngSubmit)="OnSubmit(NewPassword.value,Password.value)">
+  <div class="row">
+    <div class="input-field col s6">
+      <input class="validate" type="password" #NewPassword ngModel name="NewPassword" placeholder="Password" required minlength="3">
+      <label [attr.data-error]="NewPassword.errors!=null?(NewPassword.errors.required?'Required field!':'Minimum 3 characters needed'):''">New Password</label>
+    </div>
+  </div>
+  <div class="input-field col s6">
+      <input class="validate" type="password" #Password ngModel name="Password" placeholder="Password" required minlength="3">
+      <label [attr.data-error]="Password.errors!=null?(Password.errors.required?'Required field!':'Minimum 3 characters needed'):''">Confirm Password</label>
+    </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <button [disabled]="!updatePwdForm.valid" class="btn-large btn-submit" type="submit">Submit</button>
+    </div>
+  </div>
+</form>
