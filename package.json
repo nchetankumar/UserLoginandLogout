@@ -1,6 +1,6 @@
 {
-  "name": "UserLoginandLogouts",
-  "version": "0.0.0",
+  "name": "UserLoginandLogout",
+  "version": "0.0.1s",
   "license": "MIT",
   "scripts": {
     "ng": "ng",

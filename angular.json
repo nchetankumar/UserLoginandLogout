@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular5": {
+    "UserLoginandLogout": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -49,18 +49,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular5:build"
+            "browserTarget": "UserLoginandLogout:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular5:build:production"
+              "browserTarget": "UserLoginandLogout:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular5:build"
+            "browserTarget": "UserLoginandLogout:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "angular5-e2e": {
+    "UserLoginandLogout-e2e": {
       "root": "e2e",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -104,7 +104,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "angular5:serve"
+            "devServerTarget": "UserLoginandLogout:serve"
           }
         },
         "lint": {
@@ -121,7 +121,7 @@
       }
     }
   },
-  "defaultProject": "angular5",
+  "defaultProject": "UserLoginandLogout",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
